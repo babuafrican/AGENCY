@@ -1,0 +1,186 @@
+/* General Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Hero Section */
+#hero {
+    height: 500px;
+    background-image: url('image/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width:100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-text {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text p {
+    font-size: 24px;
+}
+
+/* About Page */
+#about-page {
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(229, 30, 30, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Team Section */
+#team-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Testimonials Section */
+#testimonials-section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+/* Case Studies Section */
+#case-studies-section {
+    padding: 50px 0;
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+.case-studies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.case-study {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to Action Section */
+#cta-section {
+    padding: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#cta-section h2 {
+    font-size: 36px;
+}
+
+#cta-section p {
+    font-size: 18px;
+}
+
+#cta-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cta-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Ensure all team member images are the same size and shaped in circles */
+.team-member img {
+    width: 200px; /* Controls the width of the images */
+    height: 250px; /* Ensures images have equal height */
+    border-radius: 50%; /* Makes the images circular */
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+}
+
+/* Align the team member section */
+.team-section {
+    display: flex;
+    justify-content: center; /* Aligns items to the center horizontally */
+    gap: 20px; /* Adds space between team members */
+    flex-wrap: wrap; /* Ensures the content wraps on smaller screens */
+}
+
+/* Team member text styling */
+.team-member {
+    text-align: center; /* Centers the name and role text */
+    margin-top: 20px; /* Adds some spacing above the text */
+}
