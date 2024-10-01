@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+"<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +43,63 @@
         <p>Contact us today for a free consultation and let us help you succeed.</p>
         <button id="cta-button">Get in Touch</button>
     </section>
+    <!-- Chat icon -->
+<div class="chat-icon" id="chatIcon" onclick="toggleChat()">
+    <div class="avatar">
+        <img src="images/babu.jpg" alt="Chat Icon">
+        <div class="status-icon"></div> <!-- Green online status indicator -->
+    </div>
+    <p>Chat with us</p>
+</div>
 
-    <script src="script.js"></script>
+
+<!-- Pre-Chat Form -->
+<div class="pre-chat-form" id="preChatForm">
+    <h2>Start a Chat</h2>
+    <form onsubmit="return submitPreChatForm()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <button type="submit">Start Chat</button>
+    </form>
+</div>
+
+
+
+
+<!-- Chat window -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+        <div class="icon-container">
+            <img src="images/babu.jpg" alt="Chat Icon" class="header-icon">
+            <div class="status-icon"></div> <!-- Green status icon -->
+        </div>
+        <p>Chat with Babu</p>
+        <button class="close-btn" onclick="toggleChat()">X</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+        <div class="chat-message bot-message">
+            <strong>Babu • 09:53 PM</strong>
+            <p>Hello there! I'm Babu. How can I assist you today?</p>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" id="userInput" placeholder="Type your message here..." onkeypress="detectEnter(event)">
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="clearChatHistory()">Clear History</button> <!-- Add this line -->
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
 </body>
-</html>
+</html>""
+
+
+

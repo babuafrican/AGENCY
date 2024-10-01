@@ -184,3 +184,311 @@ h1, h2 {
     text-align: center; /* Centers the name and role text */
     margin-top: 20px; /* Adds some spacing above the text */
 }
+
+/* General styling for the chatbox */
+.chat-widget {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    overflow: hidden;
+    display:flex; /* Hidden by default */
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out; /* Smooth transition when opening */
+}
+
+/* Chat icon */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ff9500;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.chat-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular image for the chat icon */
+    margin-right: 10px;
+    position: relative; /* To allow positioning of the status icon */
+}
+
+/* Green status icon */
+.status-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%; /* Circular status icon */
+    border: 2px solid white; /* Adds a white border around the green dot */
+}
+
+.chat-icon p {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Chat header */
+.chat-header {
+    background-color: #ff9500;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon {
+    width: 25px; /* Adjust size as needed */
+    height: 25px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Chat body with scrolling */
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Allows scrolling when the content exceeds the chat height */
+}
+
+/* Footer where the input field and send button are */
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 8px; /* Increase padding for better appearance */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.chat-footer button {
+    padding: 6px 10px; /* Adjust padding for a smaller button */
+    background-color: #ff9500; /* Keep the button color consistent */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px; /* Space between buttons */
+    cursor: pointer;
+    font-size: 10px; /* Adjust font size */
+}
+
+.chat-footer button:hover {
+    background-color: #e68a00; /* Darker color on hover */
+}
+
+
+/* Styling for chat messages */
+.chat-message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%; /* Limit the width of the message */
+    position: relative; /* Needed for the arrow */
+}
+
+/* Style for user messages */
+.user-message {
+    background-color: #d1e7ff; /* Light blue for user messages */
+    align-self: flex-end; /* Align to the right */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Style for bot messages */
+.bot-message {
+    background-color: #f1f1f1; /* Light gray for bot messages */
+    align-self: flex-start; /* Align to the left */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Optional: Add a small arrow to the messages */
+.user-message::after,
+.bot-message::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+/* Arrow for user messages */
+.user-message::after {
+    border-top: 10px solid #d1e7ff; /* Same color as the user message */
+    right: -10px; /* Position to the right of the message */
+    top: 10px; /* Position slightly below the top */
+}
+
+/* Arrow for bot messages */
+.bot-message::after {
+    border-top: 10px solid #f1f1f1; /* Same color as the bot message */
+    left: -10px; /* Position to the left of the message */
+    top: 10px; /* Position slightly below the top */
+}
+
+
+/* Adding timestamp to messages */
+.chat-message strong {
+    display: block;
+    font-size: 12px;
+    color: #999; /* Light gray for the timestamp */
+    margin-bottom: 5px;
+}
+
+
+/* Inside chat message avatar styling */
+.chat-message .avatar {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.chat-message .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chat-message .status-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+/* Ensures that the chat bubbles and content align properly */
+.chat-message p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.bot-message {
+    display: flex;
+    align-items: center;
+}
+
+.user-message {
+    text-align: right;
+}
+
+
+
+/* Pre-Chat Form styling */
+.pre-chat-form {
+    width: 300px;
+    padding: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.pre-chat-form h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.pre-chat-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pre-chat-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.pre-chat-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pre-chat-form button {
+    padding: 10px;
+    background-color: #ff9500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pre-chat-form button:hover {
+    background-color: #ff7f00;
+}
+
+
+
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.header-icon {
+    width: 25px; /* Adjust size as needed */
+    height: 25px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.status-icon {
+    width: 10px; /* Size of the status icon */
+    height: 10px;
+    background-color: green; /* Green color for online status */
+    border-radius: 50%;
+    border: 2px solid white; /* Optional white border around status icon */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+.time-stamp {
+    font-size: 10px; /* Smaller font size */
+    color: #888; /* Gray color for the timestamp */
+    margin-top: 8px; /* Space between the message and the timestamp */
+    text-align: right; /* Align the timestamp to the right */
+}
